@@ -26,6 +26,9 @@ const config: Config = {
 				textPrimary : '#26235B',
 				textSecondary : '#FFB606',
 				borderPrinary : '#FFB606'
+			},
+			fontSize : {
+				xxs : '0.6rem'
 			}
       	},
     },
