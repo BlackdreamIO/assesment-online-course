@@ -45,7 +45,7 @@ export default function OnlineCourse()
 
     return (
         <Box className="bg-white py-2 px-5 space-y-5 m-auto rounded-3xl shadow-lg mt-10
-          w-full h-auto max-w-7xl md:w-11/12 lg:w-10/12 xl:w-10/12 2xl:w-10/12">
+          w-full max-w-[1920px] h-auto md:w-11/12 lg:w-10/12 xl:w-10/12 2xl:w-10/12">
             
             <Text variant="h1" fontSize={'xx-large'} fontWeight={'800'} className="text-center text-[#26235B]">
                 ONLINE <span className="text-[#FFB606]"> COURSES </span>

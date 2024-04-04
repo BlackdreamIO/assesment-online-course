@@ -23,7 +23,7 @@ export default function CourseItem(props : CourseComponentType)
                         <Image src={thumbnailImage.src} alt={`${thumbnailImage.src} was not found`} rounded={'10px'} />
                         <HStack justify={'space-between'} my={2} px={2}>
                             <Text>{authorName}</Text>
-                            <Box display={'flex'} flexDir={'row'} gap={'2'} alignItems={'center'}>
+                            <Box display={'flex'} flexDir={'row'} alignItems={'center'} className='space-x-3'>
                                 <Image src={loveIcon.src} alt={`icon not found`} className='w-5' />
                                 <Image src={shareIcon.src} alt={`icon not found`} className='w-5' />
                                 {
@@ -32,11 +32,11 @@ export default function CourseItem(props : CourseComponentType)
                             </Box>
                         </HStack>
                     </Box>
-                    <Box px={2} w={'100%'} display={'flex'} flexDir={'column'} alignItems={'start'} justifyContent={'start'} gap={3} overflow={'hidden'}>
-                        <Text textColor={'#565656'} fontWeight={'800'} fontSize={'x-large'} textOverflow={'ellipsis'} whiteSpace={'nowrap'}>
+                    <Box px={2} w={'100%'} display={'flex'} flexDir={'column'} alignItems={'start'} justifyContent={'start'} overflow={'hidden'} className='space-y-3'>
+                        <Text textColor={'#565656'} fontWeight={'800'} fontSize={'large'} textOverflow={'ellipsis'} whiteSpace={'nowrap'}>
                             {courseName}
                         </Text>
-                        <HStack gap={2}>
+                        <HStack className='space-x-3'>
                             <HStack>
                                 <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
                                 <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
@@ -59,8 +59,8 @@ export default function CourseItem(props : CourseComponentType)
                                         {priceCurrency}. {beforePrice} 
                                     </Text>
                                 </HStack>
-                                <Button p={0} bg={'#FFB606'} _hover={{bg:'#FFB606'}} fontSize={'small'} rounded={'40px'} className='w-5/12 flex flex-row items-center justify-center gap-2'>
-                                    <Image src={shopIcon.src} alt='icon not found' />
+                                <Button p={0} bg={'#FFB606'} _hover={{bg:'#FFB606'}} fontSize={'small'} rounded={'40px'} className='w-5/12 flex flex-row items-center justify-center space-x2'>
+                                    <Image src={shopIcon.src} alt='icon not found' className='mr-2' />
                                     Buy Now
                                 </Button>
                             </Box>

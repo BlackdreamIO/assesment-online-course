@@ -31,13 +31,13 @@ export const PlaylistVideo = (props : PlaylistVideoProps) => {
                         alt={`${thumbnail.src} video was not found`} 
                     />
                 </AspectRatio>
-                <Box w={'100%'} display={'flex'} flexDir={'column'} alignItems={'start'} justifyContent={'center'} gap={'2'} overflow={'hidden'}>
+                <Box w={'100%'} display={'flex'} flexDir={'column'} alignItems={'start'} justifyContent={'center'} overflow={'hidden'}>
                     <Tooltip label={title} placement="bottom-start" openDelay={500} bg={'white'} textColor={'black'} fontSize={'x-small'} className="shadow-md">
-                        <Text textOverflow={'ellipsis'} whiteSpace={'nowrap'} className="text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
+                        <Text textOverflow={'ellipsis'} whiteSpace={'nowrap'} className="text-small sm:text-xs md:text-base lg:text-base xl:text-base 2xl:text-base">
                             {title}
                         </Text>
                     </Tooltip>
-                    <HStack>
+                    <HStack className="space-x-2">
                         <Image src={playButtonIcon.src} alt="icon was not found" />
                         <Text className="text-xs md:text-xxs">00:00:00 / 00:22:50</Text>
                     </HStack>

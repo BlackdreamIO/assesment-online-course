@@ -27,17 +27,17 @@ export default function VideoDescription(props : VideoDescriptionProps)
                     alt='instructor image was not found' 
                     className='w-40'
                 />
-                <VStack>
-                    <Text>Name : {instructorName} </Text>
-                    <Box display={'flex'} flexDir={'row'} alignItems={'center'} justifyContent={'center'} gap={2}>
+                <VStack className='space-y-2'>
+                    <Text className='text-sm md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base'>Name : {instructorName} </Text>
+                    <Box display={'flex'} flexDir={'row'} alignItems={'center'} justifyContent={'center'} className='space-x-2'>
                         <Image src={starIcon.src} alt='img was not found' className='w-5' />
                         <Image src={starIcon.src} alt='img was not found' className='w-5' />
                         <Image src={starIcon.src} alt='img was not found' className='w-5' />
                         <Image src={starIcon.src} alt='img was not found' className='w-5' />
                         <Image src={starIcon.src} alt='img was not found' className='w-5' />
                     </Box>
-                    <Text>Type : {instructorType}</Text>
-                    <Text>{instructorModel}</Text>
+                    <Text className='text-sm md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base'>Type : {instructorType}</Text>
+                    <Text className='text-sm md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base'>{instructorModel}</Text>
                 </VStack>
             </HStack>
         </Box>

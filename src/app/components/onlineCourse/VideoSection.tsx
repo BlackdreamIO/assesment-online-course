@@ -45,19 +45,19 @@ export default function VideoSection(props : VideoSectionProps)
                 <Image src={videoSrc.src} alt="video was not found" className='opacity-60' />
                 
                 <Box className='absolute left-[50%] top-[40%]'>
-                    <Image src={videoPlayImage.src} alt="icon was not found" className='w-20 relative left-[-50%] top-[-40%]' />
+                    <Image src={videoPlayImage.src} alt="icon was not found" className='w-10 relative left-[-50%] top-[-40%] md:w-10 lg:w-20 xl:w-20 2xl:w-20 3xl:w-20' />
                 </Box>
 
-                <HStack gap={5} justify={'space-between'} className='relative bg-black bg-opacity-50 p-4'>
-                    <HStack gap={5}>
-                        <Image src={playIcon.src} className='w-4' />
+                <HStack justify={'space-between'} className='relative bg-black bg-opacity-50 p-4 space-x-5'>
+                    <HStack className='space-x-3'>
+                        <Image src={playIcon.src} className='w-3' />
                         <Image src={playNextIcon.src} className='w-3' />
-                        <Image src={audioIcon.src} className='w-3' />
+                        <Image src={audioIcon.src} className='w-4' />
                         { /* Timestramp */ }
-                        <Text color={'gray'} fontSize={'small'}>00;00:00 / 12;00:00</Text>
+                        <Text color={'gray'} className='text-xxs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm 3xl:text-sm'>00;00:00 / 12;00:00</Text>
                     </HStack>
-                    <HStack gap={5}>
-                        <Image src={toggleIcon.src} className='w-3 text-red-500' />
+                    <HStack className='space-x-3'>
+                        <Image src={toggleIcon.src} className='w-4' />
                         <Image src={gareIcon.src} className='w-3' />
                         <Image src={fullscreenIcon.src} className='w-3' />
                     </HStack>
