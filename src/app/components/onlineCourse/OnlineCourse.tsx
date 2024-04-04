@@ -7,7 +7,7 @@ import playlistThumbnail from '../../../../public/playlistThumbnail.png';
 import playlistVideo from '../../../../public/playlistVideo.png'
 import videoThumbnail from '../../../../public/videoImage.png';
 
-import { PlayListVideoType } from "../../type/playlistVideo";
+import { PlayListVideoType } from "../../type/types";
 
 export default function OnlineCourse() 
 {
@@ -48,7 +48,7 @@ export default function OnlineCourse()
           w-full h-auto max-w-7xl md:w-11/12 lg:w-10/12 xl:w-10/12 2xl:w-10/12">
             
             <Text variant="h1" fontSize={'xx-large'} fontWeight={'800'} className="text-center text-[#26235B]">
-                ONLINE <Text className="text-[#FFB606]"> COURSES </Text>
+                ONLINE <span className="text-[#FFB606]"> COURSES </span>
             </Text>
             
             <HStack flexFlow="row" alignItems="center" justify={'space-between'}>
