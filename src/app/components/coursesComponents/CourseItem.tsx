@@ -1,26 +1,14 @@
-import { StaticImageData } from 'next/image';
-import { Box, Card, CardBody, Text, HStack, Image, VStack, Button } from '@chakra-ui/react'
-
-import purchasedCourseImage1 from '../../../../public/courses/purchasedCourseImage2.png';
+import { Box, Card, CardBody, Text, HStack, Image, VStack, Button } from '@chakra-ui/react';
+import { CourseComponentType } from '@/app/type/types';
 
 import loveIcon from '../../../../public/loveIcon.svg';
 import shareIcon from '../../../../public/shareIcon.svg';
 import starIcon from '../../../../public/starIcon.svg';
 import shopIcon from '../../../../public/shopIcon.svg';
+import cartIcon from '../../../../public/cart.svg';
 
 
-type CourseComponentType = {
-    thumbnailImage : StaticImageData;
-    authorName : string;
-    courseName : string;
-    reviewCount : number;
-    purchased : boolean;
-    beforePrice : number;
-    newPrice : number;
-    priceCurrency : string;
-}
-
-export default function CourseComponent(props : CourseComponentType) 
+export default function CourseItem(props : CourseComponentType) 
 {
     const { thumbnailImage, authorName, courseName, reviewCount, purchased, beforePrice, newPrice, priceCurrency } = props;
 
@@ -38,6 +26,9 @@ export default function CourseComponent(props : CourseComponentType)
                             <Box display={'flex'} flexDir={'row'} gap={'2'} alignItems={'center'}>
                                 <Image src={loveIcon.src} alt={`icon not found`} className='w-5' />
                                 <Image src={shareIcon.src} alt={`icon not found`} className='w-5' />
+                                {
+                                    !purchased && ( <Image src={cartIcon.src} alt={`icon not found`} className='w-5' /> )
+                                }
                             </Box>
                         </HStack>
                     </Box>
