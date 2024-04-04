@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-import { Container } from "./container";
 
 import logoImage from '../../../public/logoImage.png';
 import profilePicture from '../../../public/profileImage.png';
 import searchIcon from '../../../public/searchIcon.svg';
 import hamburgerIcon from '../../../public/hamburger.png';
+import { Box, HStack } from "@chakra-ui/react";
 
 /**
  * MAKE IT RESPONSIVE FOR SMALLER DEVICES
@@ -33,11 +33,12 @@ export default function Navbar()
 
     return (
         <div className="bg-[#26235B] w-full h-auto py-2 mb-20">
-            <Container flowDirection="row" className="w-full max-w-[1440px] m-auto h-full justify-between px-2 flex ">
+            <HStack className="flex flex-row w-full max-w-[1440px] m-auto h-full justify-between px-2">
                 <div className="w-2/12 flex flex-row items-center justify-start">
                     <img className="w-[120px]" src={logoImage.src} alt="logo image was not found" />
                 </div>
-                <div className="w-6/12 flex flex-row items-center justify-center list-none space-x-5">
+                <div className="w-6/12 hidden flex-row items-center justify-center list-none space-x-5
+                    md:flex lg:flex xl:flex 2xl:flex 3xl:flex">
                     <Link href='/' className={linkStyle}> HOME </Link>
                     <Link href='/about' className={linkStyle}> ABOUT </Link>
                     <Link href='/course' className={linkStyle}> COURSE </Link>
@@ -48,10 +49,10 @@ export default function Navbar()
                 <div className="w-2/12 flex flex-row items-center justify-end space-x-5">
                     <img src={searchIcon.src} className="w-[20px] invert mr-5"/>
                     <img src={profilePicture.src} className="w-[30px]" alt="profile pic was not found" />
-                    <img src={hamburgerIcon.src} className="w-[30px] invert tiny:invert-0 peer" alt="menu icon not found" />
+                    <img src={hamburgerIcon.src} className="w-[30px] invert tiny:invert-0 peer hidden" alt="menu icon not found" />
                 </div>
-            </Container>
-            <div className="w-full max-w-[1440px] m-auto bg-black flex flex-col items-center justify-center list-none space-y-3 py-2 hidden">
+            </HStack>
+            <div className="w-full max-w-[1440px] m-auto bg-black flex-col items-center justify-center list-none space-y-3 py-2 hidden">
                 <Link href='/' className={linkStyle}> HOME </Link>
                 <Link href='/about' className={linkStyle}> ABOUT </Link>
                 <Link href='/course' className={linkStyle}> COURSE </Link>

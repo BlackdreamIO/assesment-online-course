@@ -10,7 +10,7 @@ import hourglass from '../../../../public/hourglass.svg';
 import playButtonIcon from '../../../../public/playButtonIcon.svg';
 import rightArrowIcon from '../../../../public/rightArrowIcon.svg';
 
-import { PlayListVideoType } from "../../type/playlistVideo";
+import { PlayListVideoType } from "../../type/types";
 
 type PlaylistSectionProps = {
     playlistName? : string;
