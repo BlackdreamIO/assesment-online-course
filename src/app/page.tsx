@@ -1,12 +1,13 @@
-import Navbar from "./components/Navbar";
-import OnlineCourse from "./components/OnlineCourse";
 
-export default function Home() 
+import Navbar from "./components/Navbar";
+import OnlineCourse from "./components/onlineCourse/OnlineCourse";
+
+export default function Home()
 {
     return (
-        <main className="w-full">
+        <div className="bg-[#F6F6F6] min-h-screen w-full p-0 m-0 box-border">
             <Navbar/>
             <OnlineCourse/>
-        </main>
+        </div>
     )
 }
