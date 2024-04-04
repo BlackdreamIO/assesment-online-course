@@ -54,7 +54,7 @@ export default function PlaylistSection(props : PlaylistSectionProps)
             <VStack w={'100%'} spacing={3} maxH={'600px'} overflowX={'hidden'} overflowY={'scroll'} >
                 {
                     playListvideos?.map((video : PlayListVideoType) => (
-                        <PlaylistVideo title={video.title} thumbnail={video.thumbnail} />
+                        <PlaylistVideo key={video.title} title={video.title} thumbnail={video.thumbnail} />
                     ))
                 }
                 <Text className="text-sm justify-self-end self-end flex flex-row gap-2 mt-2"> 
