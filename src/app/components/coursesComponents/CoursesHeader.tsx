@@ -1,7 +1,7 @@
 import { HStack, Text, Box, Image, Divider } from "@chakra-ui/react";
 
-import arrowUpIcon from '../../../../public/arrowIupIcon.svg';
-import rightArrowIcon from '../../../../public/outlinedRightArrowIcon.svg';
+import arrowUpIcon from '../../../../public/svg/arrowUpIcon.svg';
+import rightArrowIcon from '../../../../public/svg/outlinedRightArrowIcon.svg';
 
 export default function CoursesHeader({title} : { title : string }) 
 {

@@ -5,10 +5,10 @@ import { HStack, Image, VStack, Text, Box } from "@chakra-ui/react";
 import { PlaylistVideo } from "./PlaylistVideo";
 
 
-import playlistThumbnail from '../../../../public/playlistThumbnail.png';
-import hourglass from '../../../../public/hourglass.svg';
-import playButtonIcon from '../../../../public/playButtonIcon.svg';
-import rightArrowIcon from '../../../../public/rightArrowIcon.svg';
+import playlistThumbnail from '../../../../public/images/playlistThumbnail.png';
+import hourglass from '../../../../public/svg/hourglass.svg';
+import playButtonIcon from '../../../../public/svg/playButtonIcon.svg';
+import rightArrowIcon from '../../../../public/svg/rightArrowIcon.svg';
 
 import { PlayListVideoType } from "../../type/types";
 

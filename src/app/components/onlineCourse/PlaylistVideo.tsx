@@ -2,8 +2,8 @@ import { AspectRatio, Box, HStack, Image, Text, Tooltip  } from "@chakra-ui/reac
 
 import { StaticImageData } from "next/image";
 
-import playButtonIcon from '../../../../public/playButtonIcon.svg';
-import openPadlock from '../../../../public/openPadlock.svg';
+import playButtonIcon from '../../../../public/svg/playButtonIcon.svg';
+import openPadlock from '../../../../public/svg/openPadlock.svg';
 
 type PlaylistVideoProps = {
     title : string;

@@ -1,7 +1,7 @@
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
 
-import loveIcon from '../../../../public/loveIcon.svg';
-import shareIcon from '../../../../public/shareIcon.svg';
+import loveIcon from '../../../../public/svg/loveIcon.svg';
+import shareIcon from '../../../../public/svg/shareIcon.svg';
 
 type VideoDetailType = {
     title : string;

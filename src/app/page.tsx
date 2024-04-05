@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 
-import OnlineCourse from "./components/onlineCourse/OnlineCourse";
+import OnlineCourse from "./components/OnlineCourse";
 import PurchasedCourse from "./components/PurchasedCourse";
 import ReleatedCourse from "./components/RelatedCourses";
 

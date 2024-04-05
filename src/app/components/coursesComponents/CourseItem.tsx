@@ -1,22 +1,22 @@
 import { Box, Card, CardBody, Text, HStack, Image, VStack, Button } from '@chakra-ui/react';
-import { CourseComponentType } from '@/app/type/types';
+import { CourseItemType } from '@/app/type/types';
 
-import loveIcon from '../../../../public/loveIcon.svg';
-import shareIcon from '../../../../public/shareIcon.svg';
-import starIcon from '../../../../public/starIcon.svg';
-import shopIcon from '../../../../public/shopIcon.svg';
-import cartIcon from '../../../../public/cart.svg';
+import loveIcon from '../../../../public/svg/loveIcon.svg';
+import shareIcon from '../../../../public/svg/shareIcon.svg';
+import starIcon from '../../../../public/svg/starIcon.svg';
+import shopIcon from '../../../../public/svg/shopIcon.svg';
+import cartIcon from '../../../../public/svg/cart.svg';
 
 
-export default function CourseItem(props : CourseComponentType) 
+export default function CourseItem(props : CourseItemType) 
 {
     const { thumbnailImage, authorName, courseName, reviewCount, purchased, beforePrice, newPrice, priceCurrency } = props;
 
     return (
         <Card p={0}>
-            <CardBody p={1} className='w-full h-auto shadow-md rounded-md
-                tiny:w-full sm:w-72 md:w-72 lg:w-72 xl:w-72 2xl:w-72 3xl:w-72
-                sm:h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 3xl:h-80'>
+            <CardBody p={1} className='w-11/12 h-auto shadow-md rounded-md m-auto
+                tiny:w-11/12 sm:w-52 md:w-64 lg:w-64 xl:w-64 2xl:w-64 3xl:w-64
+                sm:h-80 md:h-80 lg:h-80 xl:h-80 2xl:h-80 3xl:h-80 '>
                 
                 <VStack gap={1}>
                     <Box>
@@ -24,8 +24,8 @@ export default function CourseItem(props : CourseComponentType)
                         <HStack justify={'space-between'} my={2} px={2}>
                             <Text>{authorName}</Text>
                             <Box display={'flex'} flexDir={'row'} alignItems={'center'} className='space-x-3'>
-                                <Image src={loveIcon.src} alt={`icon not found`} className='w-5' />
-                                <Image src={shareIcon.src} alt={`icon not found`} className='w-5' />
+                                <Image src={loveIcon.src} alt={`icon not found`} className='w-4 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
+                                <Image src={shareIcon.src} alt={`icon not found`} className='w-4 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
                                 {
                                     !purchased && ( <Image src={cartIcon.src} alt={`icon not found`} className='w-5' /> )
                                 }
@@ -36,15 +36,15 @@ export default function CourseItem(props : CourseComponentType)
                         <Text textColor={'#565656'} fontWeight={'800'} fontSize={'large'} textOverflow={'ellipsis'} whiteSpace={'nowrap'}>
                             {courseName}
                         </Text>
-                        <HStack className='space-x-3'>
+                        <HStack className='space-x-2'>
                             <HStack>
-                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
-                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
-                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
-                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
-                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-5 md:w-5 lg:w-5 xl:w-5 2xl:w-5 3xl:w-5' />
+                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-4 md:w-4 lg:w-4 xl:w-4 2xl:w-4 3xl:w-4' />
+                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-4 md:w-4 lg:w-4 xl:w-4 2xl:w-4 3xl:w-4' />
+                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-4 md:w-4 lg:w-4 xl:w-4 2xl:w-4 3xl:w-4' />
+                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-4 md:w-4 lg:w-4 xl:w-4 2xl:w-4 3xl:w-4' />
+                                <Image src={starIcon.src} alt={'start icon not found'} className='w-7 tiny:w-7 sm:w-4 md:w-4 lg:w-4 xl:w-4 2xl:w-4 3xl:w-4' />
                             </HStack>
-                            <Text textColor={'#565656'}>{reviewCount} Reviews</Text>
+                            <Text textColor={'#565656'} className='text-base sm:text-xs md:text-base lg:text-base xl:text-base 2xl:text-base 3xl:text-base'>{reviewCount} Reviews</Text>
                         </HStack>
                         {
                             purchased && ( <Text textColor={'green'} fontWeight={'500'}>Purchased</Text> )

@@ -1,7 +1,7 @@
 import { Box, HStack, Image, Text, VStack } from '@chakra-ui/react';
 
-import instructor from '../../../../public/instructorGuy.png';
-import starIcon from '../../../../public/starIcon.png';
+import instructor from '../../../../public/images/instructorGuy.png';
+import starIcon from '../../../../public/images/starIcon.png';
 
 
 type VideoDescriptionProps = {

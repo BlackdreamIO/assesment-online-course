@@ -4,15 +4,15 @@ import { Box, HStack, Image, Text } from '@chakra-ui/react';
 import VideoDescription from './VideoDescription';
 import VideoDetail from './VideoDetail';
 
-import videoThumbnail from '../../../../public/videoImage.png';
-import videoPlayImage from '../../../../public/videoPlayImage.png';
+import videoThumbnail from '../../../../public/images/videoImage.png';
+import videoPlayImage from '../../../../public/images/videoPlayImage.png';
 
-import playIcon from '../../../../public/playIcon.svg';
-import playNextIcon from '../../../../public/playNextIcon.svg';
-import audioIcon from '../../../../public/audioIcon.svg';
-import toggleIcon from '../../../../public/toogleIcon.svg';
-import gareIcon from '../../../../public/gareIcon.svg'
-import fullscreenIcon from '../../../../public/fullscreenIcon.svg';
+import playIcon from '../../../../public/svg/playIcon.svg';
+import playNextIcon from '../../../../public/svg/playNextIcon.svg';
+import audioIcon from '../../../../public/svg/audioIcon.svg';
+import toggleIcon from '../../../../public/svg/toogleIcon.svg';
+import gareIcon from '../../../../public/svg/gareIcon.svg'
+import fullscreenIcon from '../../../../public/svg/fullscreenIcon.svg';
 
 
 type VideoSectionProps = {

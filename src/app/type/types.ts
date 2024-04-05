@@ -5,7 +5,7 @@ export type PlayListVideoType = {
     thumbnail : StaticImageData;
 }
 
-export type CourseComponentType = {
+export type CourseItemType = {
     thumbnailImage : StaticImageData;
     authorName : string;
     courseName : string;

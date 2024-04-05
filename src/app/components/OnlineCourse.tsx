@@ -1,17 +1,17 @@
-import { Box, Grid, Text, HStack, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { OnlineCourseHeader } from "./onlineCourse/OnlineCourseHeader";
 
-import PlaylistSection from "./PlaylistSection";
-import VideoSection from "./VideoSection";
+import VideoSection from "./onlineCourse/VideoSection";
+import PlaylistSection from "./onlineCourse/PlaylistSection";
 
-import playlistThumbnail from '../../../../public/playlistThumbnail.png';
-import playlistVideo from '../../../../public/playlistVideo.png'
-import videoThumbnail from '../../../../public/videoImage.png';
+import playlistThumbnail from '../../../public/images/playlistThumbnail.png';
+import playlistVideo from '../../../public/images/playlistVideo.png'
+import videoThumbnail from '../../../public/images/videoImage.png';
 
-import { PlayListVideoType } from "../../type/types";
+import { PlayListVideoType } from "../type/types";
 
 export default function OnlineCourse() 
 {
-
     const playListVideos : PlayListVideoType | any = [
         {
             title : 'Muay Thai Class 1',
@@ -46,22 +46,10 @@ export default function OnlineCourse()
     return (
         <Box className="bg-white py-2 px-5 space-y-5 m-auto rounded-3xl shadow-lg mt-10
           w-full max-w-[1920px] h-auto md:w-11/12 lg:w-10/12 xl:w-10/12 2xl:w-10/12">
-            
-            <Text variant="h1" fontSize={'xx-large'} fontWeight={'800'} className="text-center text-[#26235B]">
-                ONLINE <span className="text-[#FFB606]"> COURSES </span>
-            </Text>
-            
-            <HStack flexFlow="row" alignItems="center" justify={'space-between'}>
-                <Text className="text-center text-[#26235B] underline underline-offset-8 decoration-[#FFB606]">
-                    Street Fight
-                </Text>
-                <Text className="text-center text-neutral-500">
-                    Claim Certificate
-                </Text>
-            </HStack>
-            
+            <OnlineCourseHeader />
+
             <Box className="flex flex-col items-start sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row 3xl:flex-row">
-                <VideoSection 
+                <VideoSection
                     title="Muay Thai Class 1"
                     viewCount={12}
                     videoSrc={videoThumbnail}
@@ -82,7 +70,6 @@ export default function OnlineCourse()
                     playListvideos={playListVideos} 
                 />
             </Box>
-         
         </Box>
     )
 }
